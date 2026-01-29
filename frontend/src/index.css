@@ -1,0 +1,48 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.todo-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.todo-form button {
+  padding: 0.5rem 1rem;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
