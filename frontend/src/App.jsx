@@ -59,6 +59,14 @@ function App() {
             expensesByCategory[t.category] =
                 (expensesByCategory[t.category] || 0) + t.amount;
         });
+    
+    const incomesByCategory = {};
+    transactions
+        .filter((t) => t.type === "income")
+        .forEach((t) => {
+            incomesByCategory[t.category] =
+                (incomesByCategory[t.category] || 0) + t.amount;
+        });
 
     return (
         <div className="container">
@@ -117,6 +125,18 @@ function App() {
                         {
                             label: "Expenses by Category",
                             data: Object.values(expensesByCategory),
+                        },
+                    ],
+                }}
+            />
+
+            <Bar
+                data={{
+                    labels: Object.keys(incomesByCategory),
+                    datasets: [
+                        {
+                            label: "Incomes by Category",
+                            data: Object.values(incomesByCategory),
                         },
                     ],
                 }}
