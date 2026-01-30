@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Pie, Bar } from "react-chartjs-2";
 import "chart.js/auto";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://financial-tracker-rp7t.onrender.com/";
 
 function App() {
     const [transactions, setTransactions] = useState([]);
